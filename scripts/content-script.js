@@ -10,9 +10,13 @@ if (document.readyState == "complete") {
 
 function ObserveElementAvailability(selector, callback) {
   const observer = new MutationObserver(mutations => {
+    console.log("new")
+
     if (document.querySelector(selector)) {
       console.log("Caught!")
-      observer.disconnect();
+      // disconnecting the observer seems to break our work, 
+      //I think the website ties to re-inject it many times.
+      // observer.disconnect();
       callback();
     }
   });
@@ -29,7 +33,7 @@ function doMyStuffAfterLoad() {
     // in case remove() didnt' work
     popupWrapper.style.display = 'none';
 
-    document.body.style.overflow = 'scroll'
     document.body.parentElement.style.overflow = "scroll";
+    document.body.style.overflow = 'scroll'
   });
 }
