@@ -33,7 +33,8 @@ async function doMyStuffAfterLoad() {
   popupWrapper.remove()
   // in case remove() didnt' work
   popupWrapper.style.display = 'none';
-  waitForBodyOverflowHidden();
+  await waitForBodyOverflowHidden();
+  return ;
 }
 
 // For future ref:
