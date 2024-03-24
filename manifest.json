@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Disable ad-blocker detection",
+    "version": "1.0.1",
+    "description": "Disable ad-blocker detection, so you don't see popup from Websites asking to disable your ad blocker.",    
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "128": "images/icon.png",
+            "16": "images/icon.png",
+            "48": "images/icon.png"
+        }
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["scripts/content-script.js"]
+        }
+      ]
+
+}

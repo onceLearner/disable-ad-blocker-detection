@@ -1,0 +1,17 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.root{
+    background-color: white;
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-weight: 500;
+    color: rgba(82, 82, 195, 0.733);
+    text-align: center;
+}
